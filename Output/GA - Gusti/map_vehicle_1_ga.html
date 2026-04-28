@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0376d9a401c1176e193fa87cd20ff546 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0376d9a401c1176e193fa87cd20ff546" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0376d9a401c1176e193fa87cd20ff546 = L.map(
+                "map_0376d9a401c1176e193fa87cd20ff546",
+                {
+                    center: [-7.278358153631059, 112.76325243881848],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_476cabe9e113ea0970c20a0010fc83b7 = L.tileLayer(
+                "https://tile.openstreetmap.de/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "OSM contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_476cabe9e113ea0970c20a0010fc83b7.addTo(map_0376d9a401c1176e193fa87cd20ff546);
+        
+    
+            var marker_bc0e8760773952028fe3e782cc931094 = L.marker(
+                [-7.278358153631059, 112.76325243881848],
+                {
+}
+            ).addTo(map_0376d9a401c1176e193fa87cd20ff546);
+        
+    
+            var icon_51c65bce2b3158b899690f2db4995721 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_bc0e8760773952028fe3e782cc931094.bindTooltip(
+                `<div>
+                     DEPOT
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc0e8760773952028fe3e782cc931094.setIcon(icon_51c65bce2b3158b899690f2db4995721);
+            
+    
+            var feature_group_c04a0b12af669bc280caf610bece4ecf = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_9cc69f00ff2c0f3af2fc3ba0c9136798 = L.polyline(
+                [[-7.277913, 112.763309], [-7.277804, 112.762442], [-7.277795, 112.762375], [-7.278354, 112.762359], [-7.278532, 112.762354], [-7.278774, 112.762348], [-7.278842, 112.762346], [-7.278874, 112.762345], [-7.278981, 112.762401], [-7.279026, 112.762432], [-7.279083, 112.762476], [-7.279134, 112.762524], [-7.279183, 112.762579], [-7.279223, 112.762626], [-7.279264, 112.762682], [-7.279312, 112.762747], [-7.279382, 112.762877], [-7.279398, 112.762981], [-7.279435, 112.763226], [-7.279449, 112.763324], [-7.279471, 112.763471], [-7.279601, 112.764332], [-7.279715, 112.76523], [-7.279747, 112.765549], [-7.279762, 112.765648], [-7.27986, 112.766396], [-7.279874, 112.766536], [-7.279938, 112.767222], [-7.280209, 112.769821], [-7.280213, 112.769863], [-7.280218, 112.769938], [-7.280401, 112.771845], [-7.280401, 112.771916], [-7.280377, 112.772], [-7.28036, 112.772068], [-7.280344, 112.772119], [-7.28034, 112.772155], [-7.280345, 112.772202], [-7.280365, 112.772243], [-7.280384, 112.772286], [-7.280401, 112.772368], [-7.280414, 112.774332], [-7.280417, 112.774426], [-7.280418, 112.774518], [-7.280455, 112.776445], [-7.280457, 112.776548], [-7.280475, 112.778177], [-7.28048, 112.778648], [-7.280479, 112.778698], [-7.280478, 112.778835], [-7.280481, 112.778879], [-7.280491, 112.779354], [-7.280501, 112.779838], [-7.280511, 112.780284], [-7.280519, 112.780676], [-7.28052, 112.780717], [-7.280517, 112.780824], [-7.280503, 112.780962], [-7.280697, 112.780964], [-7.280813, 112.780964], [-7.281982, 112.780969], [-7.282006, 112.780969], [-7.282072, 112.780968], [-7.282093, 112.780969], [-7.282349, 112.780953], [-7.282924, 112.780947], [-7.282977, 112.780951], [-7.283071, 112.780955], [-7.28342, 112.780964], [-7.2844, 112.780988], [-7.2847, 112.780996], [-7.285667, 112.781011], [-7.286525, 112.780957], [-7.286677, 112.780952], [-7.28758, 112.780879], [-7.287854, 112.780854], [-7.288683, 112.78078], [-7.289404, 112.780716], [-7.2895, 112.780706], [-7.289584, 112.780694], [-7.289714, 112.780685], [-7.289755, 112.780683], [-7.289754, 112.78052], [-7.28976, 112.780123], [-7.289766, 112.779858], [-7.289776, 112.779469], [-7.289793, 112.778828]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": "10, 10", "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_9cc69f00ff2c0f3af2fc3ba0c9136798.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 1: Depot -> Water Sungai Depan ITATS (initial fill)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6daadac9a311a53f435581e2f3777639 = L.marker(
+                [-7.289793, 112.778828],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_5467fc1141a91559fbf92f8fbd19436e = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:blue; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_6daadac9a311a53f435581e2f3777639.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 1: Depot -> Water Sungai Depan ITATS (initial fill)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6daadac9a311a53f435581e2f3777639.setIcon(div_icon_5467fc1141a91559fbf92f8fbd19436e);
+            
+    
+            var poly_line_3b758ac9c330f96da9c774499160ef60 = L.polyline(
+                [[-7.289793, 112.778828], [-7.289793, 112.778828]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": "10, 10", "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_3b758ac9c330f96da9c774499160ef60.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 2: Refill at Water Sungai Depan ITATS (water=8000L < demand=9818L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fe8519bfc41c5b78de3452c8ba40f2a2 = L.marker(
+                [-7.289793, 112.778828],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_18dfe1b70d3526902d65e71d05a915b1 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:blue; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e2\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_fe8519bfc41c5b78de3452c8ba40f2a2.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 2: Refill at Water Sungai Depan ITATS (water=8000L < demand=9818L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fe8519bfc41c5b78de3452c8ba40f2a2.setIcon(div_icon_18dfe1b70d3526902d65e71d05a915b1);
+            
+    
+            var poly_line_c967aa7cf0f3d6c359d0e2b1de4fd499 = L.polyline(
+                [[-7.289793, 112.778828], [-7.289798, 112.778641], [-7.289806, 112.778321], [-7.289811, 112.777886], [-7.289814, 112.777617], [-7.289838, 112.77624], [-7.289756, 112.776239], [-7.289633, 112.776236], [-7.289605, 112.776236], [-7.289605, 112.776331], [-7.28959, 112.776933], [-7.289581, 112.777489], [-7.289576, 112.778034], [-7.289566, 112.778603], [-7.289546, 112.779443], [-7.28954, 112.779764], [-7.289538, 112.779857], [-7.289537, 112.779909], [-7.289526, 112.780152], [-7.289519, 112.780343], [-7.289514, 112.780464], [-7.289507, 112.78054], [-7.289143, 112.780573], [-7.288663, 112.780617], [-7.28799, 112.780679], [-7.286968, 112.780763], [-7.286664, 112.780791], [-7.286515, 112.780797], [-7.286461, 112.780803], [-7.285853, 112.780851], [-7.285722, 112.780861], [-7.285462, 112.780849], [-7.284859, 112.780841], [-7.28439, 112.78083], [-7.283229, 112.780819], [-7.283076, 112.780813], [-7.282977, 112.780811], [-7.282656, 112.780806], [-7.282137, 112.780804], [-7.282106, 112.780806], [-7.282056, 112.780805], [-7.282039, 112.780804], [-7.281544, 112.78081], [-7.280859, 112.780831], [-7.280814, 112.780832], [-7.280703, 112.780834], [-7.280517, 112.780824], [-7.280365, 112.780823], [-7.279939, 112.780825], [-7.278974, 112.780818], [-7.278397, 112.780842], [-7.27807, 112.780843], [-7.277992, 112.780849], [-7.277747, 112.780854], [-7.277507, 112.780867], [-7.2773, 112.780875], [-7.277258, 112.780882], [-7.277193, 112.780895], [-7.277036, 112.780941], [-7.276867, 112.780991], [-7.276395, 112.781122], [-7.276241, 112.781164], [-7.27584, 112.781276], [-7.275449, 112.781384], [-7.275352, 112.781407], [-7.27486, 112.781554], [-7.274677, 112.78159], [-7.274356, 112.781624], [-7.273762, 112.781661], [-7.273543, 112.781674], [-7.272862, 112.781723], [-7.27276, 112.781731], [-7.272003, 112.781782], [-7.271911, 112.781793], [-7.2703, 112.782017], [-7.270242, 112.782026], [-7.270104, 112.782046], [-7.269958, 112.78208], [-7.269864, 112.7821], [-7.269258, 112.782253], [-7.269012, 112.782305], [-7.268199, 112.782432], [-7.266732, 112.782639], [-7.266099, 112.782722], [-7.265963, 112.78274], [-7.265292, 112.782833], [-7.264598, 112.78293], [-7.263909, 112.783005], [-7.263643, 112.78301], [-7.263519, 112.783001], [-7.263418, 112.782986], [-7.263383, 112.782982], [-7.263312, 112.782977], [-7.263301, 112.782976]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_c967aa7cf0f3d6c359d0e2b1de4fd499.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 3: Drive to Jalan Kalijudan entry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ab97274ccf4dd3c5fcc8c49bc7afc72f = L.marker(
+                [-7.263301, 112.782976],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_477de74d4a5590f3fcdd6db80e8ad84b = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:#1f77b4; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e3\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_ab97274ccf4dd3c5fcc8c49bc7afc72f.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 3: Drive to Jalan Kalijudan entry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ab97274ccf4dd3c5fcc8c49bc7afc72f.setIcon(div_icon_477de74d4a5590f3fcdd6db80e8ad84b);
+            
+    
+            var poly_line_b8f2650dd27b04f8f9d406349be4868c = L.polyline(
+                [[-7.263301, 112.782976], [-7.263266, 112.782974], [-7.262919, 112.782953], [-7.26255, 112.782896], [-7.262183, 112.782809], [-7.26201, 112.782759], [-7.26191, 112.78274], [-7.261273, 112.782599], [-7.260965, 112.782538], [-7.260674, 112.782494], [-7.260572, 112.782484], [-7.260071, 112.782427], [-7.259582, 112.782387], [-7.259416, 112.782378], [-7.259062, 112.782359], [-7.258914, 112.782349], [-7.258749, 112.782342], [-7.258451, 112.782313], [-7.25813, 112.782279], [-7.257941, 112.782259], [-7.257869, 112.782251], [-7.257792, 112.782244], [-7.257611, 112.782227], [-7.257311, 112.782206], [-7.256622, 112.782156], [-7.256179, 112.782171], [-7.255682, 112.782222], [-7.25516, 112.782301], [-7.255042, 112.78232]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_b8f2650dd27b04f8f9d406349be4868c.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 4: Water Jalan Kalijudan (demand=9818L, remaining=-1818L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dbdcfe030ae9540aa5c059c461027511 = L.marker(
+                [-7.255042, 112.78232],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_3e3520643cc3daf659ccae56e9182f9d = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:#1f77b4; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e4\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_dbdcfe030ae9540aa5c059c461027511.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 4: Water Jalan Kalijudan (demand=9818L, remaining=-1818L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dbdcfe030ae9540aa5c059c461027511.setIcon(div_icon_3e3520643cc3daf659ccae56e9182f9d);
+            
+    
+            var poly_line_b617f35df5a438100fcd93384d98c2d0 = L.polyline(
+                [[-7.255042, 112.78232], [-7.255031, 112.782322], [-7.254987, 112.782333], [-7.254883, 112.782358], [-7.254724, 112.782399], [-7.253232, 112.782967], [-7.252282, 112.783317], [-7.252263, 112.783369], [-7.25227, 112.78341], [-7.252288, 112.78343], [-7.252317, 112.783447], [-7.25278, 112.783277], [-7.254716, 112.782551], [-7.254897, 112.782506], [-7.254966, 112.782487], [-7.255005, 112.782477], [-7.255368, 112.78239], [-7.255754, 112.782326], [-7.256653, 112.782297], [-7.257786, 112.782367], [-7.257824, 112.782369], [-7.257931, 112.782387], [-7.258009, 112.782398], [-7.258078, 112.782408], [-7.25822, 112.782423], [-7.258347, 112.782437], [-7.25854, 112.782455], [-7.258689, 112.782465], [-7.258939, 112.78248], [-7.259629, 112.78254], [-7.260567, 112.782638], [-7.260676, 112.78265], [-7.260925, 112.782688], [-7.261231, 112.782744], [-7.261824, 112.782879], [-7.261967, 112.782907], [-7.262139, 112.782955], [-7.262521, 112.783045], [-7.262826, 112.783091], [-7.263223, 112.783137], [-7.263265, 112.783142], [-7.263284, 112.783144], [-7.263352, 112.783152], [-7.263393, 112.783154], [-7.263632, 112.78316], [-7.263887, 112.783141], [-7.264139, 112.783121], [-7.264438, 112.783096], [-7.265006, 112.783026], [-7.265091, 112.783012], [-7.26598, 112.78288], [-7.266122, 112.782862], [-7.268219, 112.782581], [-7.269033, 112.78246], [-7.26929, 112.782407], [-7.269337, 112.782394], [-7.269798, 112.782263], [-7.269902, 112.782238], [-7.270001, 112.782209], [-7.270154, 112.782182], [-7.27027, 112.782167], [-7.271069, 112.782057], [-7.27193, 112.781937], [-7.272444, 112.781904], [-7.273725, 112.781813], [-7.273759, 112.781797], [-7.27378, 112.781786], [-7.273793, 112.781763], [-7.273794, 112.781739], [-7.273792, 112.781715], [-7.273786, 112.781687], [-7.273762, 112.781661], [-7.273543, 112.781674], [-7.272862, 112.781723], [-7.272815, 112.781375]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": "10, 10", "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_b617f35df5a438100fcd93384d98c2d0.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 5: Refill at Water Selokan Dekat Resto Niki Sae (water=-1818L < demand=2138L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b19b8159381f347db75a4d207e16ded4 = L.marker(
+                [-7.272815, 112.781375],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_a46f5d61d5db6a4ef45e596bbfe749fa = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:blue; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e5\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_b19b8159381f347db75a4d207e16ded4.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 5: Refill at Water Selokan Dekat Resto Niki Sae (water=-1818L < demand=2138L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b19b8159381f347db75a4d207e16ded4.setIcon(div_icon_a46f5d61d5db6a4ef45e596bbfe749fa);
+            
+    
+            var poly_line_08253fe402f37114efbeea22d09d6594 = L.polyline(
+                [[-7.272815, 112.781375], [-7.272756, 112.780943], [-7.272602, 112.779826], [-7.27232, 112.777769], [-7.27234, 112.77775], [-7.272355, 112.777727], [-7.272364, 112.777687], [-7.272358, 112.777647], [-7.272336, 112.777611], [-7.272304, 112.777587], [-7.27227, 112.777578], [-7.272235, 112.77758], [-7.272204, 112.777594], [-7.27218, 112.777614], [-7.272164, 112.777641], [-7.271449, 112.777729], [-7.270387, 112.777865], [-7.269509, 112.777992], [-7.269466, 112.777981], [-7.269424, 112.777995], [-7.269396, 112.77803], [-7.269391, 112.778075], [-7.269412, 112.778115], [-7.269449, 112.778137], [-7.269492, 112.778136], [-7.269528, 112.778113], [-7.269547, 112.778071], [-7.270403, 112.777989], [-7.272096, 112.777766]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_08253fe402f37114efbeea22d09d6594.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 6: Drive to Jalan Dharmahusada Indah III entry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d07fea9d2b143f46a9e9ee02de0ad5bd = L.marker(
+                [-7.272096, 112.777766],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_945b135898a3505fde8ea57d05b9a873 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:#1f77b4; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e6\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_d07fea9d2b143f46a9e9ee02de0ad5bd.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 6: Drive to Jalan Dharmahusada Indah III entry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d07fea9d2b143f46a9e9ee02de0ad5bd.setIcon(div_icon_945b135898a3505fde8ea57d05b9a873);
+            
+    
+            var poly_line_28a57f62e341e6dbba378a6edc2a9329 = L.polyline(
+                [[-7.272096, 112.777766], [-7.272183, 112.777755], [-7.272228, 112.777783], [-7.27226, 112.777788], [-7.272291, 112.777783], [-7.27232, 112.777769], [-7.27234, 112.77775], [-7.272355, 112.777727], [-7.272364, 112.777687], [-7.272358, 112.777647], [-7.272336, 112.777611], [-7.272304, 112.777587], [-7.27227, 112.777578], [-7.272235, 112.77758], [-7.272204, 112.777594], [-7.27218, 112.777614], [-7.272164, 112.777641], [-7.271449, 112.777729], [-7.270387, 112.777865], [-7.269566, 112.777984]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_28a57f62e341e6dbba378a6edc2a9329.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 7: Water Jalan Dharmahusada Indah III (demand=2138L, remaining=5862L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f78f51d343b3529d6b5dcc55a9f7439e = L.marker(
+                [-7.269566, 112.777984],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_ed6f8cb537fdd117f39963220c988eea = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:#1f77b4; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e7\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_f78f51d343b3529d6b5dcc55a9f7439e.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 7: Water Jalan Dharmahusada Indah III (demand=2138L, remaining=5862L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f78f51d343b3529d6b5dcc55a9f7439e.setIcon(div_icon_ed6f8cb537fdd117f39963220c988eea);
+            
+    
+            var poly_line_4ccd92fd79cb1542d77ed20898744be6 = L.polyline(
+                [[-7.269566, 112.777984], [-7.269509, 112.777992], [-7.269466, 112.777981], [-7.269424, 112.777995], [-7.269396, 112.77803], [-7.269391, 112.778075], [-7.269412, 112.778115], [-7.269825, 112.781274], [-7.269914, 112.781908], [-7.269923, 112.781973], [-7.269958, 112.78208], [-7.270001, 112.782209], [-7.270154, 112.782182], [-7.27027, 112.782167], [-7.271069, 112.782057], [-7.27193, 112.781937], [-7.272444, 112.781904], [-7.273725, 112.781813], [-7.273759, 112.781797], [-7.27378, 112.781786], [-7.273793, 112.781763], [-7.273794, 112.781739], [-7.273792, 112.781715], [-7.273786, 112.781687], [-7.273762, 112.781661], [-7.273543, 112.781674], [-7.272862, 112.781723], [-7.272815, 112.781375]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": "10, 10", "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_4ccd92fd79cb1542d77ed20898744be6.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 8: Refill at Water Selokan Dekat Resto Niki Sae (water=5862L < demand=7500L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cb414b5d52e8926cf5222b00020f9a8c = L.marker(
+                [-7.272815, 112.781375],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_3c39632ef324d316f4790b7d44207a50 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:blue; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e8\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_cb414b5d52e8926cf5222b00020f9a8c.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 8: Refill at Water Selokan Dekat Resto Niki Sae (water=5862L < demand=7500L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb414b5d52e8926cf5222b00020f9a8c.setIcon(div_icon_3c39632ef324d316f4790b7d44207a50);
+            
+    
+            var poly_line_fdfb4ef2c0743d3baeb550b8e9f45530 = L.polyline(
+                [[-7.272815, 112.781375], [-7.272756, 112.780943], [-7.272602, 112.779826], [-7.272504, 112.779838], [-7.27276, 112.781731], [-7.272003, 112.781782], [-7.271911, 112.781793], [-7.2703, 112.782017], [-7.270242, 112.782026], [-7.270104, 112.782046], [-7.269958, 112.78208], [-7.269864, 112.7821], [-7.269258, 112.782253], [-7.269012, 112.782305], [-7.268199, 112.782432], [-7.266732, 112.782639], [-7.266099, 112.782722], [-7.265963, 112.78274], [-7.265292, 112.782833], [-7.264598, 112.78293], [-7.263909, 112.783005], [-7.263643, 112.78301], [-7.263519, 112.783001], [-7.263418, 112.782986], [-7.263393, 112.783154], [-7.263381, 112.783275], [-7.263377, 112.783318], [-7.263367, 112.783432], [-7.263348, 112.783648], [-7.263236, 112.784104], [-7.263196, 112.784211], [-7.263165, 112.784295], [-7.263089, 112.784461], [-7.262998, 112.784601], [-7.262725, 112.784939], [-7.262584, 112.78519], [-7.262538, 112.785271], [-7.262359, 112.785651], [-7.262275, 112.785855], [-7.262235, 112.785953], [-7.262191, 112.786064], [-7.26217, 112.786124], [-7.262115, 112.786279], [-7.262037, 112.786528], [-7.261928, 112.786915], [-7.261922, 112.786941], [-7.261805, 112.787389], [-7.261659, 112.787853], [-7.261565, 112.788134], [-7.261418, 112.788568], [-7.261301, 112.788893], [-7.261149, 112.789304], [-7.261054, 112.789531], [-7.260979, 112.789697], [-7.260952, 112.789754], [-7.260944, 112.78977], [-7.260884, 112.789878], [-7.260752, 112.790088], [-7.260684, 112.790195], [-7.260654, 112.79025], [-7.260641, 112.790278], [-7.26062, 112.790324], [-7.260585, 112.790414], [-7.260555, 112.790507], [-7.260526, 112.790626], [-7.260515, 112.790691], [-7.260509, 112.790726], [-7.260465, 112.791001], [-7.260429, 112.791231], [-7.260416, 112.791296], [-7.260402, 112.791354], [-7.260388, 112.791388], [-7.260378, 112.791422], [-7.2603, 112.791619], [-7.260179, 112.791879], [-7.260066, 112.792101], [-7.260006, 112.792223], [-7.259926, 112.792398], [-7.259812, 112.792632], [-7.259798, 112.792661], [-7.259462, 112.79339], [-7.25942, 112.793503], [-7.259376, 112.793612], [-7.2593, 112.793744], [-7.259222, 112.79387], [-7.259037, 112.794133], [-7.258635, 112.794598], [-7.258552, 112.794683], [-7.258457, 112.794821], [-7.258231, 112.79528], [-7.258185, 112.795424], [-7.258152, 112.795559], [-7.258093, 112.795574], [-7.258047, 112.795618], [-7.258013, 112.795625], [-7.257986, 112.795627], [-7.25782, 112.795632], [-7.257769, 112.795645], [-7.257729, 112.795671], [-7.25767, 112.79572], [-7.257623, 112.795759], [-7.257582, 112.795796], [-7.257527, 112.795839], [-7.257453, 112.795876], [-7.257409, 112.795894], [-7.257324, 112.795917], [-7.257243, 112.795939], [-7.25716, 112.795953], [-7.2571, 112.795957], [-7.256969, 112.795946], [-7.256879, 112.795933], [-7.256761, 112.795911], [-7.256741, 112.795906], [-7.256683, 112.795892], [-7.256627, 112.795875], [-7.2565, 112.795836], [-7.255978, 112.795685], [-7.255705, 112.795615], [-7.255474, 112.795559], [-7.255367, 112.795536], [-7.255216, 112.795519], [-7.255122, 112.795509], [-7.254971, 112.795499], [-7.254582, 112.795449], [-7.254388, 112.795421], [-7.2543, 112.795409], [-7.254203, 112.795398], [-7.254137, 112.795396], [-7.253819, 112.795388], [-7.253778, 112.795387], [-7.253621, 112.795385], [-7.253347, 112.795382], [-7.253161, 112.795379], [-7.25302, 112.795377], [-7.252987, 112.795263]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_fdfb4ef2c0743d3baeb550b8e9f45530.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 9: Drive to Jalan Kenjeran entry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bbe70e848781ac373f89f2bc794eeb90 = L.marker(
+                [-7.252987, 112.795263],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_27608374c4f73b157f680da6c3265703 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:#1f77b4; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e9\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_bbe70e848781ac373f89f2bc794eeb90.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 9: Drive to Jalan Kenjeran entry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bbe70e848781ac373f89f2bc794eeb90.setIcon(div_icon_27608374c4f73b157f680da6c3265703);
+            
+    
+            var poly_line_a5d239219f9857b404c9e0e3c2c482af = L.polyline(
+                [[-7.252987, 112.795263], [-7.252977, 112.795229], [-7.252924, 112.795031], [-7.252701, 112.794261], [-7.252608, 112.793955], [-7.252489, 112.793476], [-7.252352, 112.792992], [-7.25223, 112.792565], [-7.252186, 112.792392], [-7.252002, 112.791719], [-7.251877, 112.791243], [-7.251701, 112.790631], [-7.251676, 112.790542], [-7.251639, 112.79041], [-7.251604, 112.790285], [-7.251542, 112.790062], [-7.251404, 112.789521], [-7.251277, 112.78908], [-7.251207, 112.788851], [-7.251175, 112.788752], [-7.251074, 112.788386], [-7.251012, 112.788195], [-7.250819, 112.787528], [-7.250688, 112.787088], [-7.250674, 112.78704], [-7.250596, 112.786793], [-7.250587, 112.786764], [-7.250476, 112.786398], [-7.25039, 112.78609], [-7.250369, 112.786007], [-7.250366, 112.785992], [-7.250301, 112.785768], [-7.250205, 112.78541], [-7.25015, 112.785207], [-7.250138, 112.785162], [-7.250106, 112.785034], [-7.249999, 112.78465], [-7.249952, 112.784479], [-7.249951, 112.784476]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_a5d239219f9857b404c9e0e3c2c482af.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 10: Water Jalan Kenjeran (demand=7500L, remaining=500L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0c68f62a882ec62abc77a3c10017034a = L.marker(
+                [-7.249951, 112.784476],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_d50dfdfeed743a8c8cc001e9ac43e043 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:#1f77b4; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e10\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_0c68f62a882ec62abc77a3c10017034a.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 10: Water Jalan Kenjeran (demand=7500L, remaining=500L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0c68f62a882ec62abc77a3c10017034a.setIcon(div_icon_d50dfdfeed743a8c8cc001e9ac43e043);
+            
+    
+            var poly_line_ba46ae10f110e23cdfd70e3e99d3eb92 = L.polyline(
+                [[-7.249951, 112.784476], [-7.249917, 112.784341], [-7.249879, 112.784203], [-7.249834, 112.784219], [-7.249718, 112.784263], [-7.249687, 112.784274], [-7.249723, 112.784401], [-7.249749, 112.784503], [-7.249766, 112.784553], [-7.249844, 112.784838], [-7.249945, 112.785221], [-7.249958, 112.785269], [-7.250009, 112.785253], [-7.250121, 112.785218], [-7.25015, 112.785207], [-7.250138, 112.785162], [-7.250106, 112.785034], [-7.249999, 112.78465], [-7.250013, 112.784502], [-7.250042, 112.784428], [-7.250069, 112.784381], [-7.250111, 112.784335], [-7.250243, 112.784232], [-7.250361, 112.784184], [-7.251714, 112.783677], [-7.251949, 112.783589], [-7.252206, 112.783483], [-7.252317, 112.783447], [-7.25278, 112.783277], [-7.254716, 112.782551], [-7.254897, 112.782506], [-7.254966, 112.782487], [-7.255005, 112.782477], [-7.255368, 112.78239], [-7.255754, 112.782326], [-7.256653, 112.782297], [-7.257786, 112.782367], [-7.257824, 112.782369], [-7.257931, 112.782387], [-7.258009, 112.782398], [-7.258078, 112.782408], [-7.25822, 112.782423], [-7.258347, 112.782437], [-7.25854, 112.782455], [-7.258689, 112.782465], [-7.258939, 112.78248], [-7.259629, 112.78254], [-7.260567, 112.782638], [-7.260676, 112.78265], [-7.260925, 112.782688], [-7.261231, 112.782744], [-7.261824, 112.782879], [-7.261967, 112.782907], [-7.262139, 112.782955], [-7.262521, 112.783045], [-7.262826, 112.783091], [-7.263223, 112.783137], [-7.263265, 112.783142], [-7.263284, 112.783144], [-7.263352, 112.783152], [-7.263393, 112.783154], [-7.263632, 112.78316], [-7.263887, 112.783141], [-7.264139, 112.783121], [-7.264438, 112.783096], [-7.265006, 112.783026], [-7.265091, 112.783012], [-7.26598, 112.78288], [-7.266122, 112.782862], [-7.268219, 112.782581], [-7.269033, 112.78246], [-7.26929, 112.782407], [-7.269337, 112.782394], [-7.269798, 112.782263], [-7.269902, 112.782238], [-7.270001, 112.782209], [-7.270154, 112.782182], [-7.27027, 112.782167], [-7.271069, 112.782057], [-7.27193, 112.781937], [-7.272444, 112.781904], [-7.273725, 112.781813], [-7.273759, 112.781797], [-7.27378, 112.781786], [-7.273793, 112.781763], [-7.273794, 112.781739], [-7.273792, 112.781715], [-7.273786, 112.781687], [-7.273762, 112.781661], [-7.273543, 112.781674], [-7.272862, 112.781723], [-7.272815, 112.781375]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": "10, 10", "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_ba46ae10f110e23cdfd70e3e99d3eb92.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 11: Refill at Water Selokan Dekat Resto Niki Sae (water=500L < demand=14250L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3375cb478cdbe8297f2da539b580285a = L.marker(
+                [-7.272815, 112.781375],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_2c30a74948ac50e823727f88fabf7bbc = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:blue; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e11\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_3375cb478cdbe8297f2da539b580285a.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 11: Refill at Water Selokan Dekat Resto Niki Sae (water=500L < demand=14250L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3375cb478cdbe8297f2da539b580285a.setIcon(div_icon_2c30a74948ac50e823727f88fabf7bbc);
+            
+    
+            var poly_line_dae31195afde7d66d9fb66bdd5ff7146 = L.polyline(
+                [[-7.272815, 112.781375], [-7.272756, 112.780943], [-7.272602, 112.779826], [-7.272504, 112.779838], [-7.27276, 112.781731], [-7.272003, 112.781782], [-7.271911, 112.781793], [-7.271897, 112.781827], [-7.271896, 112.781867], [-7.271908, 112.781904], [-7.27193, 112.781937], [-7.272444, 112.781904], [-7.273725, 112.781813], [-7.274462, 112.781756], [-7.274662, 112.781742], [-7.274902, 112.78171], [-7.275072, 112.781668], [-7.275211, 112.781633], [-7.275325, 112.781601], [-7.275843, 112.781452], [-7.276222, 112.781343], [-7.276285, 112.781325], [-7.27636, 112.781303], [-7.277216, 112.781058], [-7.277295, 112.781043], [-7.277485, 112.781028], [-7.277523, 112.781025], [-7.277719, 112.781014], [-7.277879, 112.781011], [-7.278071, 112.781012], [-7.278588, 112.781005], [-7.278809, 112.781004], [-7.279637, 112.780991], [-7.279919, 112.780979], [-7.280312, 112.780962], [-7.280356, 112.780962], [-7.280503, 112.780962], [-7.280697, 112.780964], [-7.280813, 112.780964], [-7.281982, 112.780969], [-7.282006, 112.780969], [-7.282072, 112.780968], [-7.282093, 112.780969], [-7.282349, 112.780953], [-7.282924, 112.780947], [-7.282977, 112.780951], [-7.283071, 112.780955], [-7.28342, 112.780964], [-7.2844, 112.780988], [-7.2847, 112.780996], [-7.285667, 112.781011], [-7.286525, 112.780957], [-7.286677, 112.780952], [-7.28758, 112.780879], [-7.287854, 112.780854], [-7.288683, 112.78078], [-7.289404, 112.780716], [-7.2895, 112.780706], [-7.289584, 112.780694], [-7.289714, 112.780685], [-7.289755, 112.780683], [-7.290655, 112.780647], [-7.29078, 112.78066], [-7.29121, 112.780705], [-7.29138, 112.780732], [-7.291663, 112.780781], [-7.291798, 112.780804], [-7.292273, 112.780916], [-7.292582, 112.78102], [-7.292914, 112.78113], [-7.293181, 112.781234], [-7.294562, 112.781635], [-7.295479, 112.781867], [-7.295849, 112.781959], [-7.296101, 112.782001], [-7.296345, 112.782015], [-7.297052, 112.782042], [-7.297305, 112.782048], [-7.297873, 112.782036], [-7.298064, 112.78204], [-7.298316, 112.782033], [-7.298637, 112.782031], [-7.299372, 112.781985], [-7.300139, 112.781894], [-7.300669, 112.781835], [-7.301072, 112.781808], [-7.301237, 112.781793], [-7.301622, 112.781759], [-7.302273, 112.781678], [-7.302732, 112.781614], [-7.303089, 112.78156], [-7.303401, 112.781518], [-7.303655, 112.781487], [-7.304793, 112.781312], [-7.305096, 112.781248], [-7.305453, 112.781145], [-7.305608, 112.781103], [-7.305902, 112.781009], [-7.306082, 112.780952], [-7.306708, 112.780736], [-7.307127, 112.780643], [-7.30724, 112.780626], [-7.307567, 112.780599], [-7.307963, 112.780583], [-7.308565, 112.780592], [-7.308696, 112.780592], [-7.309566, 112.780624], [-7.309608, 112.780626], [-7.310046, 112.780643], [-7.310089, 112.780644], [-7.311216, 112.780687], [-7.311246, 112.780688], [-7.311325, 112.780691], [-7.3114, 112.780693], [-7.312163, 112.780721], [-7.312336, 112.780727], [-7.312415, 112.780731], [-7.312619, 112.78074], [-7.314557, 112.780828], [-7.314672, 112.780834], [-7.314749, 112.780835], [-7.316147, 112.780878], [-7.316914, 112.780912], [-7.317089, 112.780919], [-7.317183, 112.780923], [-7.317241, 112.780924], [-7.317272, 112.780927], [-7.317443, 112.780934], [-7.318088, 112.780963], [-7.319048, 112.781014], [-7.319716, 112.781039], [-7.320491, 112.781069], [-7.320718, 112.781078], [-7.320924, 112.781089], [-7.321539, 112.781122], [-7.321873, 112.781134], [-7.322194, 112.781145], [-7.322306, 112.781148], [-7.322367, 112.781146], [-7.322554, 112.78114], [-7.323363, 112.781083], [-7.323558, 112.781068], [-7.323698, 112.781063], [-7.323859, 112.78106], [-7.323899, 112.781059], [-7.324142, 112.781055], [-7.324964, 112.781056], [-7.325233, 112.781076], [-7.325533, 112.781128], [-7.325803, 112.781182], [-7.326172, 112.781277], [-7.326353, 112.781351], [-7.326515, 112.781422], [-7.326565, 112.78144], [-7.326774, 112.781499], [-7.327043, 112.781546], [-7.327234, 112.781554], [-7.327309, 112.781557], [-7.327665, 112.781542], [-7.328196, 112.781493], [-7.328385, 112.781482], [-7.328861, 112.781439], [-7.331337, 112.781254], [-7.331585, 112.781244], [-7.331634, 112.781244], [-7.331739, 112.781242], [-7.331759, 112.781242], [-7.331771, 112.781243], [-7.332089, 112.781257], [-7.332512, 112.781285], [-7.332976, 112.781342], [-7.333276, 112.781391], [-7.333609, 112.781444], [-7.334205, 112.781608], [-7.334303, 112.781643], [-7.334356, 112.781665], [-7.334798, 112.781847], [-7.335159, 112.78203], [-7.335471, 112.782174], [-7.335813, 112.782354], [-7.33631, 112.782627], [-7.337087, 112.78311], [-7.337159, 112.783152], [-7.337915, 112.783595], [-7.337994, 112.783649], [-7.338598, 112.784058], [-7.338877, 112.784247], [-7.33912, 112.784416], [-7.339399, 112.784601], [-7.339834, 112.78489], [-7.340807, 112.785534], [-7.34138, 112.78588], [-7.341849, 112.786134], [-7.34234, 112.786342], [-7.342848, 112.786502], [-7.343369, 112.786614], [-7.343898, 112.786675], [-7.344431, 112.786686], [-7.344811, 112.786665], [-7.34486, 112.78666], [-7.345025, 112.786645], [-7.34531, 112.786576], [-7.346065, 112.786369], [-7.34612, 112.786355], [-7.346137, 112.786325], [-7.346141, 112.7863], [-7.346133, 112.786263], [-7.346118, 112.786241], [-7.346093, 112.786227], [-7.346058, 112.786217], [-7.345898, 112.786273], [-7.345271, 112.786425], [-7.344955, 112.786486], [-7.34488, 112.78649], [-7.34484, 112.786494], [-7.344504, 112.786523], [-7.344082, 112.786527], [-7.34366, 112.786497], [-7.343242, 112.786432], [-7.342994, 112.786371]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_dae31195afde7d66d9fb66bdd5ff7146.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 12: Drive to Jalan Doktor Insinyur Haji Soekarno entry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1364794acd0427e185ce10cc32df8c9e = L.marker(
+                [-7.342994, 112.786371],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_fa59c39a78b84a0c8442ce8fea83407b = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:#1f77b4; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e12\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_1364794acd0427e185ce10cc32df8c9e.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 12: Drive to Jalan Doktor Insinyur Haji Soekarno entry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1364794acd0427e185ce10cc32df8c9e.setIcon(div_icon_fa59c39a78b84a0c8442ce8fea83407b);
+            
+    
+            var poly_line_8026564624f367c8bd346873331c12f1 = L.polyline(
+                [[-7.342994, 112.786371], [-7.342776, 112.786317], [-7.342321, 112.786159], [-7.341883, 112.78596], [-7.341466, 112.785721], [-7.341135, 112.785527], [-7.340772, 112.785313], [-7.338974, 112.784099], [-7.33875, 112.783951], [-7.338154, 112.783557], [-7.337457, 112.783135], [-7.337417, 112.783108], [-7.337114, 112.78291], [-7.336421, 112.782445], [-7.33583, 112.782102], [-7.335647, 112.782012], [-7.335573, 112.781976], [-7.335051, 112.781718], [-7.334742, 112.781593], [-7.334383, 112.781448], [-7.334343, 112.781432], [-7.333968, 112.781326], [-7.333641, 112.781246], [-7.333317, 112.781195], [-7.332987, 112.781144], [-7.332529, 112.781106], [-7.332193, 112.781083], [-7.33175, 112.781073]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_8026564624f367c8bd346873331c12f1.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 13: Water Jalan Doktor Insinyur Haji Soekarno (demand=14250L, remaining=-6250L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_60a72a66580756e9386a1aee24e720e3 = L.marker(
+                [-7.33175, 112.781073],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_40a5fd11ee1a55105aa08168b616f700 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:#1f77b4; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e13\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_60a72a66580756e9386a1aee24e720e3.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 13: Water Jalan Doktor Insinyur Haji Soekarno (demand=14250L, remaining=-6250L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_60a72a66580756e9386a1aee24e720e3.setIcon(div_icon_40a5fd11ee1a55105aa08168b616f700);
+            
+    
+            var poly_line_ddd190f6d9cb0b06b9fddd2c22d621ea = L.polyline(
+                [[-7.33175, 112.781073], [-7.33175, 112.781073], [-7.331635, 112.781075], [-7.331576, 112.781077], [-7.331418, 112.781085], [-7.33095, 112.781102], [-7.329335, 112.781238], [-7.328382, 112.781317], [-7.328157, 112.781329], [-7.327453, 112.78137], [-7.32728, 112.781379], [-7.327086, 112.781374], [-7.326925, 112.781358], [-7.326782, 112.78133], [-7.326582, 112.781265], [-7.32651, 112.781234], [-7.326378, 112.781183], [-7.326173, 112.781106], [-7.326092, 112.781079], [-7.325842, 112.781008], [-7.32566, 112.780967], [-7.325553, 112.780947], [-7.325287, 112.78091], [-7.324959, 112.780889], [-7.324153, 112.780899], [-7.323911, 112.780903], [-7.322985, 112.780931], [-7.322709, 112.780936], [-7.322359, 112.780956], [-7.322253, 112.780954], [-7.321476, 112.780967], [-7.320726, 112.780937], [-7.320693, 112.780954], [-7.320673, 112.780986], [-7.320671, 112.781023], [-7.320687, 112.781057], [-7.320718, 112.781078], [-7.320924, 112.781089], [-7.321539, 112.781122], [-7.321873, 112.781134], [-7.322194, 112.781145], [-7.322306, 112.781148], [-7.322313, 112.781324], [-7.322386, 112.781723], [-7.322435, 112.781897], [-7.322527, 112.782199], [-7.32253, 112.782281], [-7.322513, 112.782401], [-7.322311, 112.78306], [-7.322271, 112.78323], [-7.32226, 112.783311], [-7.32221, 112.783573], [-7.322161, 112.783667], [-7.322109, 112.783883], [-7.322036, 112.784182], [-7.321911, 112.784683], [-7.321583, 112.785976], [-7.321563, 112.786066], [-7.321494, 112.786397], [-7.321223, 112.787545], [-7.321203, 112.787645], [-7.321178, 112.787771], [-7.321124, 112.788106], [-7.321119, 112.788168], [-7.321066, 112.788411], [-7.32102, 112.788653], [-7.320964, 112.789017], [-7.320931, 112.789101], [-7.320826, 112.789715]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": "10, 10", "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_ddd190f6d9cb0b06b9fddd2c22d621ea.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 14: Refill at Water Selokan Depan Perumahan YKP Pandugo (water=-6250L < demand=3600L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0caab4deacc6ba16e030e5a2e82e5517 = L.marker(
+                [-7.320826, 112.789715],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_1957915ac1df01f6faf72a5931555b79 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:blue; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e14\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_0caab4deacc6ba16e030e5a2e82e5517.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 14: Refill at Water Selokan Depan Perumahan YKP Pandugo (water=-6250L < demand=3600L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0caab4deacc6ba16e030e5a2e82e5517.setIcon(div_icon_1957915ac1df01f6faf72a5931555b79);
+            
+    
+            var poly_line_a2b03267a4b08196ebcf5068c7999211 = L.polyline(
+                [[-7.320826, 112.789715], [-7.320602, 112.79102], [-7.320584, 112.791143], [-7.320662, 112.791168], [-7.320694, 112.791037], [-7.320786, 112.79051], [-7.320937, 112.789695], [-7.320954, 112.789549], [-7.320974, 112.789404], [-7.320984, 112.78929], [-7.320991, 112.789213], [-7.320986, 112.789106], [-7.320964, 112.789017], [-7.32102, 112.788653], [-7.321066, 112.788411], [-7.321119, 112.788168], [-7.321164, 112.78813], [-7.321184, 112.788104], [-7.321204, 112.788072], [-7.32123, 112.787992], [-7.321252, 112.787907], [-7.321306, 112.787667], [-7.321326, 112.787562], [-7.321551, 112.786544], [-7.321584, 112.786396], [-7.321661, 112.786078], [-7.321684, 112.785995], [-7.321787, 112.785556], [-7.321812, 112.785457], [-7.321873, 112.785206], [-7.321958, 112.784878], [-7.322115, 112.78418], [-7.322189, 112.783886], [-7.322229, 112.783668], [-7.32221, 112.783573], [-7.32226, 112.783311], [-7.322271, 112.78323], [-7.322311, 112.78306], [-7.322513, 112.782401], [-7.32253, 112.782281], [-7.322527, 112.782199], [-7.322435, 112.781897], [-7.322386, 112.781723], [-7.322313, 112.781324], [-7.322306, 112.781148], [-7.322367, 112.781146], [-7.322554, 112.78114], [-7.323363, 112.781083], [-7.323558, 112.781068], [-7.323698, 112.781063], [-7.323859, 112.78106], [-7.323899, 112.781059], [-7.32393, 112.781039], [-7.323946, 112.781013], [-7.323951, 112.780976], [-7.323943, 112.780943], [-7.323932, 112.780926], [-7.323911, 112.780903], [-7.322985, 112.780931], [-7.322709, 112.780936], [-7.322359, 112.780956], [-7.322253, 112.780954], [-7.321476, 112.780967], [-7.320726, 112.780937], [-7.320502, 112.780927], [-7.317449, 112.780795], [-7.317231, 112.780785], [-7.316224, 112.780725], [-7.316044, 112.780712], [-7.3147, 112.780662], [-7.314568, 112.780659], [-7.314133, 112.780637], [-7.312691, 112.780581], [-7.312366, 112.780572], [-7.312322, 112.78057], [-7.312168, 112.780562], [-7.311608, 112.780534], [-7.311416, 112.780525], [-7.311409, 112.780125], [-7.311184, 112.778845], [-7.310952, 112.777688], [-7.310918, 112.777555], [-7.310863, 112.777359], [-7.310839, 112.77727], [-7.31083, 112.777237], [-7.310639, 112.776537], [-7.310551, 112.776255], [-7.310446, 112.775863], [-7.310354, 112.775543], [-7.310242, 112.775176], [-7.310115, 112.774749], [-7.309986, 112.774278], [-7.309881, 112.773891], [-7.309866, 112.773834], [-7.309697, 112.7732], [-7.309666, 112.7731], [-7.309513, 112.772535], [-7.30942, 112.772165], [-7.309295, 112.771722], [-7.309105, 112.771028], [-7.30907, 112.770917], [-7.308797, 112.76994], [-7.308778, 112.769843], [-7.308748, 112.76974], [-7.308717, 112.769647], [-7.30867, 112.769467], [-7.308611, 112.769227], [-7.308496, 112.768754], [-7.308434, 112.768501], [-7.308385, 112.768309], [-7.308243, 112.767814], [-7.30804, 112.767105], [-7.307868, 112.766504], [-7.307801, 112.766271], [-7.307779, 112.766184], [-7.307592, 112.765465], [-7.307549, 112.765326], [-7.307493, 112.765146], [-7.307447, 112.764952], [-7.307284, 112.7643], [-7.307123, 112.763731], [-7.307119, 112.76372], [-7.307005, 112.763278], [-7.306733, 112.762291], [-7.306659, 112.762001], [-7.306616, 112.761854], [-7.306586, 112.761711], [-7.306477, 112.761762], [-7.306398, 112.761786], [-7.306358, 112.761801], [-7.305945, 112.76192], [-7.305775, 112.761963], [-7.305487, 112.762024], [-7.305294, 112.762042], [-7.304936, 112.762057], [-7.304485, 112.762077], [-7.303995, 112.762088], [-7.303858, 112.762088], [-7.303441, 112.762091], [-7.302887, 112.762081], [-7.30171, 112.762041], [-7.301232, 112.762025], [-7.301061, 112.76202], [-7.300468, 112.762004], [-7.300099, 112.762002], [-7.300061, 112.762002], [-7.29984, 112.762001], [-7.299536, 112.76201], [-7.299381, 112.762], [-7.299256, 112.762004], [-7.299155, 112.762004]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_a2b03267a4b08196ebcf5068c7999211.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 15: Drive to Jalan Raya Menur entry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a11ef3be19379856bce059564d9ab4f3 = L.marker(
+                [-7.299155, 112.762004],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_9c2774da503ddc81a6cb1601e49e9a9d = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:#1f77b4; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e15\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_a11ef3be19379856bce059564d9ab4f3.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 15: Drive to Jalan Raya Menur entry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a11ef3be19379856bce059564d9ab4f3.setIcon(div_icon_9c2774da503ddc81a6cb1601e49e9a9d);
+            
+    
+            var poly_line_ee93c311ced349ad615263f67ae09f80 = L.polyline(
+                [[-7.299155, 112.762004], [-7.298842, 112.762006], [-7.298587, 112.761999], [-7.298371, 112.761999], [-7.298281, 112.762004], [-7.298194, 112.762009], [-7.29753, 112.762023], [-7.297447, 112.76203], [-7.294939, 112.762231], [-7.294251, 112.76229], [-7.293956, 112.762323], [-7.293892, 112.762332], [-7.293766, 112.762342], [-7.293666, 112.762349], [-7.293317, 112.762371], [-7.292584, 112.762438], [-7.291736, 112.762515], [-7.29131, 112.762576], [-7.290624, 112.762673], [-7.289583, 112.762863], [-7.289413, 112.762892], [-7.289369, 112.7629], [-7.28892, 112.762981], [-7.288175, 112.763089], [-7.288077, 112.763099]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_ee93c311ced349ad615263f67ae09f80.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 16: Water Jalan Raya Menur (demand=3600L, remaining=4400L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_008ad3c55c4906ee792cbd947496891f = L.marker(
+                [-7.288077, 112.763099],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_a89e506898158cccb005b0f2494ca1c4 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:#1f77b4; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e16\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_008ad3c55c4906ee792cbd947496891f.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 16: Water Jalan Raya Menur (demand=3600L, remaining=4400L)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_008ad3c55c4906ee792cbd947496891f.setIcon(div_icon_a89e506898158cccb005b0f2494ca1c4);
+            
+    
+            var poly_line_7e8f833c01083d31e87d2d468b26b8c3 = L.polyline(
+                [[-7.288077, 112.763099], [-7.28803, 112.763104], [-7.287986, 112.763108], [-7.287951, 112.763099], [-7.287903, 112.763062], [-7.287836, 112.762977], [-7.287805, 112.762949], [-7.287755, 112.762923], [-7.287653, 112.762871], [-7.287629, 112.762866], [-7.287617, 112.762867], [-7.287604, 112.762868], [-7.28746, 112.762894], [-7.287399, 112.762921], [-7.287357, 112.76295], [-7.287313, 112.762977], [-7.287276, 112.76301], [-7.287244, 112.763048], [-7.287195, 112.763132], [-7.287184, 112.763171], [-7.28718, 112.763184], [-7.287174, 112.763235], [-7.287097, 112.763241], [-7.287047, 112.763239], [-7.287004, 112.763231], [-7.286345, 112.763071], [-7.286094, 112.762999], [-7.285843, 112.762927], [-7.285742, 112.762902], [-7.28519, 112.762755], [-7.285091, 112.762725], [-7.285042, 112.762707], [-7.28501, 112.762694], [-7.28497, 112.762677], [-7.284934, 112.762653], [-7.284847, 112.762604], [-7.284807, 112.762568], [-7.284772, 112.762548], [-7.284693, 112.762514], [-7.284664, 112.762504], [-7.284555, 112.762473], [-7.283692, 112.762246], [-7.283087, 112.762125], [-7.283029, 112.762116], [-7.282974, 112.76211], [-7.282922, 112.762108], [-7.282882, 112.76211], [-7.28283, 112.76211], [-7.282176, 112.76214], [-7.281822, 112.762137], [-7.281035, 112.762153], [-7.280905, 112.762159], [-7.280791, 112.762165], [-7.279851, 112.762199], [-7.27965, 112.762208], [-7.279543, 112.762211], [-7.279453, 112.762221], [-7.279275, 112.762243], [-7.279109, 112.762258], [-7.278909, 112.762274], [-7.277569, 112.762302], [-7.277568, 112.762382], [-7.277795, 112.762375], [-7.277804, 112.762442], [-7.277913, 112.763309]],
+                {"bubblingMouseEvents": true, "color": "#1f77b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f77b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            poly_line_7e8f833c01083d31e87d2d468b26b8c3.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 17: Return to depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ed6232057bcfb28148b7fe9c017824d8 = L.marker(
+                [-7.277913, 112.763309],
+                {
+}
+            ).addTo(feature_group_c04a0b12af669bc280caf610bece4ecf);
+        
+    
+            var div_icon_a656bd76408985f566ec61eece09564d = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size:9pt; font-weight:bold; color:white;\n                    background:#1f77b4; border:2px solid white; border-radius:5px;\n                    padding:2px 5px; min-width:20px; text-align:center;\n                    box-shadow:0 0 4px rgba(0,0,0,0.5);\"\u003e17\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+            marker_ed6232057bcfb28148b7fe9c017824d8.bindTooltip(
+                `<div>
+                     Vehicle 1 Step 17: Return to depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ed6232057bcfb28148b7fe9c017824d8.setIcon(div_icon_a656bd76408985f566ec61eece09564d);
+            
+    
+            feature_group_c04a0b12af669bc280caf610bece4ecf.addTo(map_0376d9a401c1176e193fa87cd20ff546);
+        
+    
+            var layer_control_1b77465aeacfaf4a15436e7641627b49_layers = {
+                base_layers : {
+                    "https://tile.openstreetmap.de/{z}/{x}/{y}.png" : tile_layer_476cabe9e113ea0970c20a0010fc83b7,
+                },
+                overlays :  {
+                    "Vehicle 1" : feature_group_c04a0b12af669bc280caf610bece4ecf,
+                },
+            };
+            let layer_control_1b77465aeacfaf4a15436e7641627b49 = L.control.layers(
+                layer_control_1b77465aeacfaf4a15436e7641627b49_layers.base_layers,
+                layer_control_1b77465aeacfaf4a15436e7641627b49_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_0376d9a401c1176e193fa87cd20ff546);
+
+        
+</script>
+</html>
