@@ -9,13 +9,13 @@ TITLE = "Map Viewer"
 
 base_dir = Path(__file__).resolve().parent
 
-output_dir = base_dir.parent / "output"
+output_dir = base_dir.parent / "Output/GA - Gusti"
 
 if not output_dir.exists():
     raise FileNotFoundError(f"directory not found (/Output): {output_dir}")
 
-vehicle_files = sorted(output_dir.glob("map_vehicle_*.html"))
-all_file = output_dir / "map_all_vehicles.html"
+vehicle_files = sorted(output_dir.glob("map_vehicle_*_ga.html"))
+all_file = output_dir / "map_all_vehicles_ga.html"
 
 html_files = []
 
@@ -31,7 +31,7 @@ if not html_files:
 
 links = []
 for f in html_files:
-    if f.name == "map_all_vehicles.html":
+    if f.name == "map_all_vehicles_ga.html":
         display_name = "Map All Vehicles"
     else:
         display_name = f.stem.replace("_", " ").title()
