@@ -1,4 +1,4 @@
-id,start_lat,start_lon,end_lat,end_lon,length (m),width (m),area (m2),demand (liter)
+id,start_lat,start_lon,end_lat,end_lon,length (m),width (m),area (m2),demand
 Jalan Raya Mulyosari,-7.258301153658700,112.79561663072800,-7.2736585383304900,112.79771417459300,575,2,1150,"1725,0"
 Jalan Raya Kertajaya Indah (ITS - Oakwood),-7.27940813067957,112.78961915600100,-7.28056016219701,112.7811623896960,950,9,8550,"12825,0"
 Jalan Raya Kertajaya Indah - Manyar Kertoarjo,-7.280610704725040,112.78069309453100,-7.279389691698660,112.76248190713400,2000,10,20000,"30000,0"
